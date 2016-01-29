@@ -26,7 +26,7 @@ Then, access it via http://localhost:8080 or http://host-ip:8080 in a browser.
 If you'd like to use an external database instead of a linked mysql container, specify the hostname and port with WORDPRESS_DB_HOST along with the password in WORDPRESS_DB_PASSWORD and the username in WORDPRESS_DB_USER (if it is something other than root):
 
 ```
- $ docker run --name some-wordpress -e WORDPRESS_DB_HOST=10.1.2.3:3306 -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d wordpress 
+ $ docker run --name some-wordpress -e WORDPRESS_DB_HOST=10.1.2.3:3306 -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d evild/docker-wordpress-fpm:latest 
 ```
 
 #... via docker-compose
@@ -40,7 +40,7 @@ wordpress:
     - 8080:80
 
 db:
-  image: mariadb
+  image: mariadb:latest
   environment:
     MYSQL_ROOT_PASSWORD: example
 ```
