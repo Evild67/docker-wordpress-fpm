@@ -1,4 +1,4 @@
-FROM php:7.0.1-fpm
+FROM php:7.0.2-fpm
 
 # install the PHP extensions we need
 RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev && rm -rf /var/lib/apt/lists/* \
